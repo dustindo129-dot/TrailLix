@@ -1,0 +1,58 @@
+{
+  "cli": {
+    "version": ">= 3.0.0"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "ios": {
+        "resourceClass": "m1-medium"
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "ios": {
+        "simulator": true,
+        "resourceClass": "m1-medium"
+      },
+      "android": {
+        "buildType": "apk",
+        "env": {
+          "SENTRY_AUTH_TOKEN": "${SENTRY_AUTH_TOKEN}"
+        }
+      },
+      "env": {
+        "EXPO_PUBLIC_API_URL": "https://staging-api.traillix.com"
+      }
+    },
+    "production": {
+      "ios": {
+        "resourceClass": "m1-medium"
+      },
+      "android": {
+        "buildType": "app-bundle",
+        "env": {
+          "SENTRY_AUTH_TOKEN": "${SENTRY_AUTH_TOKEN}"
+        }
+      },
+      "env": {
+        "EXPO_PUBLIC_API_URL": "https://api.traillix.com"
+      },
+      "autoIncrement": true
+    }
+  },
+  "submit": {
+    "production": {
+      "ios": {
+        "appleId": "your-apple-id@example.com",
+        "ascAppId": "1234567890",
+        "appleTeamId": "ABCD1234"
+      },
+      "android": {
+        "serviceAccountKeyPath": "./google-play-service-account.json",
+        "track": "internal"
+      }
+    }
+  }
+}

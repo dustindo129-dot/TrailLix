@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom global styles */
+.font-inter {
+  font-family: 'Inter';
+}
+
+/* Custom utility classes */
+.shadow-sm {
+  shadow-color: #000;
+  shadow-offset: 0 1px 2px;
+  shadow-opacity: 0.05;
+  shadow-radius: 1px;
+  elevation: 1;
+}
+
+.shadow-md {
+  shadow-color: #000;
+  shadow-offset: 0 4px 6px;
+  shadow-opacity: 0.1;
+  shadow-radius: 3px;
+  elevation: 3;
+}
+
+.shadow-lg {
+  shadow-color: #000;
+  shadow-offset: 0 10px 15px;
+  shadow-opacity: 0.1;
+  shadow-radius: 6px;
+  elevation: 5;
+}
